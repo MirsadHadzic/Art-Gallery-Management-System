@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Color Utilities</title>
+    <title>Art Gallery Management System - Colors</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,6 +19,8 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
 
 </head>
 
@@ -297,12 +299,17 @@
                             href="https://getbootstrap.com/docs">Bootstrap Documentation</a> page. The custom utilities
                         below were created to extend this theme past the default utility classes built into Bootstrap's
                         framework.</p> -->
-                        <div style="text-align: center;">
-                            <p style="margin-top: 20px;">Our gallery is a vibrant tapestry of colors, each painting telling a unique story through its hues. We've meticulously analyzed our collection to uncover the most prevalent colors, offering insight into the artistic palette that dominates our space.</p>
-        <p>From soothing earthy tones to electrifying pops of color, our gallery encompasses a diverse range of hues that cater to every aesthetic preference.</p>
-        <p>Earth tones like brown, green, and beige evoke a sense of grounding and connection to nature, while vibrant shades of red, blue, and yellow infuse energy and vitality into our artworks.</p>
-        <p>Step into our world of colors and immerse yourself in the rich tapestry of emotions and stories that each shade conveys.</p>
-    </div>
+                        <hr>
+                        <div style="text-align: left;">
+                            <p style="margin-top: 20px;">Our gallery is a vibrant tapestry of colors, each painting telling a unique story through its hues. We've meticulously analyzed our collection to uncover the most prevalent colors, offering insight into the artistic palette that dominates our space.
+                                                        From soothing earthy tones to electrifying pops of color, our gallery encompasses a diverse range of hues that cater to every aesthetic preference.
+                                                        Earth tones like brown, green, and beige evoke a sense of grounding and connection to nature, while vibrant shades of red, blue, and yellow infuse energy and vitality into our artworks.
+                                                        Step into our world of colors and immerse yourself in the rich tapestry of emotions and stories that each shade conveys.</p>
+                        </div>
+
+                    <div id="container" style="width: 600px; height: 400px; margin: 0 auto"></div>
+    
+    
 
 
                     <!-- Content Row -->
@@ -447,6 +454,63 @@
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Simulated data for color distribution
+            var colorData = [{
+                name: 'Red',
+                y: 25, // Percentage of red color
+                color: '#ff0000' // Red color
+            }, {
+                name: 'Blue',
+                y: 20, // Percentage of blue color
+                color: '#0000ff' // Blue color
+            }, {
+                name: 'Green',
+                y: 30, // Percentage of green color
+                color: '#00ff00' // Green color
+            }, {
+                name: 'Yellow',
+                y: 15, // Percentage of yellow color
+                color: '#ffff00' // Yellow color
+            }, {
+                name: 'Other',
+                y: 10, // Percentage of other colors
+                color: '#cccccc' // Grey color for other
+            }];
+    
+            // Create the chart
+            Highcharts.chart('container', {
+                chart: {
+                    type: 'pie'
+                },
+                title: {
+                    text: 'Color Distribution in Art Galleries'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: true,
+                            format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                        }
+                    }
+                },
+                series: [{
+                    name: 'Colors',
+                    colorByPoint: true,
+                    data: colorData
+                }]
+            });
+        });
+        </script>
 </body>
 
 </html>

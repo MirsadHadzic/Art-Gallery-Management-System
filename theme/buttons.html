@@ -395,42 +395,53 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
+                
                 <div class="container-fluid">
-
                     <!-- Page Heading -->
                     <h1 class="h3 mb-4 text-gray-800">Gallery Components</h1>
-
-                    <div class="row">
-
+                    <hr>
+                    <div class="row"> 
+                        <!-- Text describing gallery requirements -->
                         <div class="col-lg-6">
-
-                           <!-- Text describing gallery requirements -->
-                    <div>
-                        <!-- <h2>Gallery Requirements</h2> -->
-                        <p>Here are the essential components needed for a functional gallery:</p>
-                        <ul>
-                            <li>Grid layout to display images</li>
-                            <li>Responsive design for different screen sizes</li>
-                            <li>Ability to navigate between images</li>
-                            <li>Option for caption or description for each image</li>
-                        </ul>
-                    </div>
-
-                         <!-- Examples of the gallery -->
-                         <div class="gallery-frame">
-                            <button class="prev">&#10094;</button>
-                            <div class="gallery-images">
-                                <img class="gallery-image" src="img/download (1).jpg" alt="Example 1" style="width: 500px; height: 500px;">
-                                <img class="gallery-image" src="img/adrien-olichon-pOU6Zi6dJ6E-unsplash.jpg" alt="Example 2" style="width: 500px; height: 500px;">
-                                <img class="gallery-image" src="img/I-turn-my-lucid-dreams-into-a-whimisical-painting-5e341a4ad0143__880.jpg" alt="Example 3" style="width: 500px; height: 500px;">
+                            <div>
+                                <p>Welcome to our Art Gallery!</p>
+                                <p>Discover the essential components that make our gallery a delightful experience:</p>
+                                <ul>
+                                    <li>Grid layout to elegantly showcase a diverse range of artworks</li>
+                                    <li>Responsive design ensuring seamless browsing on various devices</li>
+                                    <li>Effortless navigation between captivating images</li>
+                                    <li>Engaging captions offering insights into each masterpiece</li>
+                                    <li>Immersive experience that brings art to life</li>
+                                    <li>Seamless integration with social media for sharing your favorites</li>
+                                    <li>Dynamic search functionality to find specific artworks easily</li>
+                                    <li>Interactive features for an enhanced viewing experience</li>
+                                    <li>Personalized recommendations based on your preferences</li>
+                                </ul>
                             </div>
-                            <button class="next">&#10095;</button>
                         </div>
-
-
+                        <!-- Examples of the gallery -->
+                        <div class="col-lg-6">
+                            <div class="gallery-frame">
+                                <button class="prev">&#10094;</button>
+                                <div class="gallery-images">
+                                    <img class="gallery-image" src="img/adrien-olichon-pOU6Zi6dJ6E-unsplash.jpg" alt="Example 1" style="width: 500px; height: 500px;">
+                                    <img class="gallery-image" src="img/download (1).jpg" alt="Example 2" style="width: 500px; height: 500px;">
+                                    <img class="gallery-image" src="img/I-turn-my-lucid-dreams-into-a-whimisical-painting-5e341a4ad0143__880.jpg" alt="Example 3" style="width: 500px; height: 500px;">
+                                    <img class="gallery-image" src="img/download (3).jpg" alt="Example 1" style="width: 500px; height: 500px;">
+                                    <img class="gallery-image" src="img/download.jpg" alt="Example 2" style="width: 500px; height: 500px;">
+                                    <img class="gallery-image" src="img/is-9Cg9_Af3jLU-unsplash.jpg" alt="Example 1" style="width: 500px; height: 500px;">
+                                    <img class="gallery-image" src="img/Weeping-Woman-1937-Pablo-Picasso.png" alt="Example 2" style="width: 500px; height: 500px;">
+                                    <img class="gallery-image" src="img/c7a21e1f55abebdc05c1635a94f498bd.jpg" alt="Example 1" style="width: 500px; height: 500px;">
+                                    <img class="gallery-image" src="img/mystic-forest-angelika-hrschlger.jpg" alt="Example 2" style="width: 500px; height: 500px;">
+                                </div>
+                                <button class="next">&#10095;</button>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
+                
+                
+                
                 <!-- /.container-fluid -->
 
             </div>
@@ -500,7 +511,11 @@
                 if (currentIndex > 0) {
                     currentIndex--;
                     updateGallery();
+                }else
+                {
+                    currentIndex = galleryImages.children.length - 1;
                 }
+                updateGallery();
             }
 
             // Function to navigate to the next image
@@ -508,7 +523,11 @@
                 if (currentIndex < galleryImages.children.length - 1) {
                     currentIndex++;
                     updateGallery();
+                }else
+                {
+                    currentIndex = 0;
                 }
+                updateGallery();
             }
 
             // Function to update the gallery position
