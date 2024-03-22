@@ -159,10 +159,10 @@
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                            <input id = "searchInput" type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
+                                <button id="searchButton" class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
@@ -477,6 +477,78 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        /*document.getElementById('searchButton').addEventListener('click', function() {
+            var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            var elements = document.getElementsByTagName('*');
+            var matches = [];
+    
+            for (var i = 0; i < elements.length; i++) {
+                if (elements[i].innerText.toLowerCase().includes(searchTerm)) {
+                    matches.push(elements[i]);
+                }
+            }
+    
+            if (matches.length > 0) {
+                // Displaying search results
+                var resultsHtml = '<div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">';
+                resultsHtml += '<h6 class="dropdown-header">Search Results</h6>';
+                for (var j = 0; j < matches.length; j++) {
+                    resultsHtml += '<a class="dropdown-item" href="#" onclick="scrollToElement(\'' + matches[j].id + '\')">';
+                    resultsHtml += matches[j].innerText.substring(0, 50) + '...';
+                    resultsHtml += '</a>';
+                }
+                resultsHtml += '</div>';
+                document.getElementById('searchDropdownContainer').innerHTML = resultsHtml;
+            } else {
+                // No matches found
+                document.getElementById('searchDropdownContainer').innerHTML = '<div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown"><p>No matches found</p></div>';
+            }
+        });
+    
+        function scrollToElement(id) {
+            var element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }*/
+        document.getElementById('searchButton').addEventListener('click', function() {
+    var searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    var elements = document.getElementsByTagName('*');
+    var matches = [];
+
+    for (var i = 0; i < elements.length; i++) {
+        if (elements[i].innerText.toLowerCase().includes(searchTerm)) {
+            matches.push(elements[i]);
+        }
+    }
+
+    if (matches.length > 0) {
+        // Displaying search results
+        var resultsHtml = '<div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">';
+        resultsHtml += '<h6 class="dropdown-header">Search Results</h6>';
+        for (var j = 0; j < matches.length; j++) {
+            var innerHtml = matches[j].innerHTML.toLowerCase();
+            var startIndex = innerHtml.indexOf(searchTerm);
+            var endIndex = startIndex + searchTerm.length;
+            var matchedText = matches[j].innerHTML.substring(startIndex, endIndex);
+            var highlightedText = matches[j].innerHTML.replace(new RegExp(matchedText, 'i'), '<b>' + matchedText + '</b>');
+            resultsHtml += '<a class="dropdown-item" href="#" onclick="scrollToElement(\'' + matches[j].id + '\')">';
+            resultsHtml += highlightedText;
+            resultsHtml += '</a>';
+        }
+        resultsHtml += '</div>';
+        document.getElementById('searchDropdownContainer').innerHTML = resultsHtml;
+    } else {
+        // No matches found
+        document.getElementById('searchDropdownContainer').innerHTML = '<div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown"><p>No matches found</p></div>';
+    }
+});
+
+    </script>
+
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

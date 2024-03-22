@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Abstract Harmony",
+    "image": "img/is-9Cg9_Af3jLU-unsplash.jpg",
+    "description": "An abstract composition that explores the balance between chaos and order, featuring dynamic brushstrokes and harmonious color palette."
+  },
+  {
+    "id": 2,
+    "title": "Dreamscape",
+    "image": "img/adrien-olichon-pOU6Zi6dJ6E-unsplash.jpg",
+    "description": "A surreal landscape painting that transports viewers into a dream world filled with vibrant colors and whimsical shapes."
+  },
+  {
+    "id": 3,
+    "title": "Ethereal Waters",
+    "image": "img/download.jpg",
+    "description": "A serene painting depicting a tranquil seascape with soft hues and gentle waves, evoking a sense of peace and calmness."
+  },
+  {
+    "id": 4,
+    "title": "Mystic Forest",
+    "image": "img/mystic-forest-angelika-hrschlger.jpg",
+    "description": "An enchanting forest scene captured with intricate details, showcasing the mystical beauty of nature in all its glory."
+  },
+  {
+    "id": 5,
+    "title": "Whimsical Dreams",
+    "image": "img/I-turn-my-lucid-dreams-into-a-whimisical-painting-5e341a4ad0143__880.jpg",
+    "description": "A playful artwork filled with imagination and fantasy, featuring delightful characters and vibrant colors."
+  },
+  {
+    "id": 6,
+    "title": "Melancholic Melodies",
+    "image": "img/download (3).jpg",
+    "description": "A musical-themed painting capturing the essence of melancholy through expressive strokes and poignant imagery."
+  },
+  {
+    "id": 7,
+    "title": "Surreal Reflections",
+    "image": "img/c7a21e1f55abebdc05c1635a94f498bd.jpg",
+    "description": "A serene painting depicting a tranquil seascape with soft hues and gentle waves, evoking a sense of peace and calmness."
+  },
+  {
+    "id": 8,
+    "title": "Cityscape Symphony",
+    "image": "img/download (2).jpg",
+    "description": "A dynamic cityscape painting capturing the vibrant energy and rhythm of urban life, with bustling streets and towering skyscrapers."
+  },
+  {
+    "id": 9,
+    "title": "Magical Realms",
+    "image": "img/download (1).jpg",
+    "description": "A mesmerizing painting that transports viewers to fantastical realms filled with mythical creatures and enchanting landscapes."
+  }
+]

@@ -22,12 +22,40 @@
       href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
       rel="stylesheet"
     />
+    <script src="script.js"></script>
+
+    
+    <style>
+      .image-card {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 300px;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .image-card img {
+        max-width: 100%;
+        height: auto;
+      }
+      .image-card h3 {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+      .image-card p {
+        margin-top: 5px;
+        font-size: 14px;
+        color: #666;
+      }
+    </style>
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
   </head>
 
   <body id="page-top">
+
     <!-- Page Wrapper -->
     <div id="wrapper">
       <!-- Sidebar -->
@@ -201,7 +229,8 @@
             >
               <div class="input-group">
                 <input
-                  type="text"
+                  type="search"
+                  id = 'search'
                   class="form-control bg-light border-0 small"
                   placeholder="Search for..."
                   aria-label="Search"
@@ -512,139 +541,10 @@
               </div>
             </div> -->
 
-            <div class="row">
-            <!-- Example Card 1 -->
-            <div class="col-md-4 mb-4">
-              <div class="card">
-                <a href="artwork2.html">
-                  <img src="img/is-9Cg9_Af3jLU-unsplash.jpg" class="card-img-top" alt="Artwork 1" style="width: 100%; height: 200px;">
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title"><strong>Abstract Harmony</strong></h5>
-                  <p class="card-text">An abstract composition that explores the balance between chaos and order, featuring dynamic brushstrokes and harmonious color palette.</p>
-                </div>
-              </div>
+            <div id="image-gallery">
+              <!-- Images will be dynamically populated here -->
+              <p>meho</p>
             </div>
-
-            <!-- Example Card 2 -->
-            <div class="col-md-4 mb-4">
-              <div class="card">
-                <a href="artwork3.html">
-                <img src="img/adrien-olichon-pOU6Zi6dJ6E-unsplash.jpg" class="card-img-top" alt="Image 2" style="width: 100%; height: 200px; ">
-              </a>
-                <div class="card-body">
-                  <h5 class="card-title"><strong>Dreamscape</strong></h5>
-                  <p class="card-text">A surreal landscape painting that transports viewers into a dream world filled with vibrant colors and whimsical shapes.</p>
-                  <!-- You can add more details or buttons here if needed -->
-                </div>
-              </div>
-            </div>
-
-              <!-- Card 3 -->
-              <div class="col-md-4 mb-4">
-                <div class="card">
-                  <a href="artwork4.html">
-                  <img src="img/download.jpg" class="card-img-top" alt="Artwork 3" style="width: 100%; height: 200px;">
-                </a>
-                  <div class="card-body">
-                    <h5 class="card-title"><strong>Ethereal Waters</strong></h5>
-                    <p class="card-text">A serene painting depicting a tranquil seascape with soft hues and gentle waves, evoking a sense of peace and calmness.</p>
-                    <!-- Additional details or buttons can be added here if needed -->
-                  </div>
-                </div>
-              </div>
-
-            </div>
-              <div class="row">
-                <!-- Card 1 -->
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <a href="artwork1.html">
-                    <img src="img/mystic-forest-angelika-hrschlger.jpg" class="card-img-top" alt="Artwork 1" style="width: 100%; height: 200px;">
-                  </a>
-                    <div class="card-body">
-                      <h5 class="card-title"><strong>Mystic Forest</strong></h5>
-                      <p class="card-text">An enchanting forest scene captured with intricate details, showcasing the mystical beauty of nature in all its glory.</p>
-                      <!-- Additional details or buttons can be added here if needed -->
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <a href="artwork5.html">
-                    <img src="img/I-turn-my-lucid-dreams-into-a-whimisical-painting-5e341a4ad0143__880.jpg" class="card-img-top" alt="Artwork 3" style="width: 100%; height: 200px;">
-                  </a>
-                    <div class="card-body">
-                      <h5 class="card-title"><strong>Whimsical Dreams</strong></h5>
-                      <p class="card-text">A playful artwork filled with imagination and fantasy, featuring delightful characters and vibrant colors.</p>
-                      <!-- Additional details or buttons can be added here if needed -->
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <a href="artwork6.html">
-                    <img src="img/download (3).jpg" class="card-img-top" alt="Artwork 3" style="width: 100%; height: 200px;">
-                  </a>
-                    <div class="card-body">
-                      <h5 class="card-title"><strong>Melancholic Melodies</strong></h5>
-                      <p class="card-text">A musical-themed painting capturing the essence of melancholy through expressive strokes and poignant imagery.</p>
-                      <!-- Additional details or buttons can be added here if needed -->
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              <!-- Repeat the above structure for the next set of three cards -->
-
-
-              <div class="row">
-                <!-- Card 1 -->
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <a href="artwork7.html">
-                    <img src="img/c7a21e1f55abebdc05c1635a94f498bd.jpg" class="card-img-top" alt="Artwork 1" style="width: 100%; height: 200px;">
-                  </a>
-                    <div class="card-body">
-                      <h5 class="card-title"><strong>Surreal Reflections</strong></h5>
-                      <p class="card-text">A serene painting depicting a tranquil seascape with soft hues and gentle waves, evoking a sense of peace and calmness.</p>
-                      <!-- Additional details or buttons can be added here if needed -->
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <a href="artwork8.html">
-                    <img src="img/download (2).jpg" class="card-img-top" alt="Artwork 2" style="width: 100%; height: 200px;">
-                  </a>
-                    <div class="card-body">
-                      <h5 class="card-title"><strong>Cityscape Symphony</strong></h5>
-                      <p class="card-text">A dynamic cityscape painting capturing the vibrant energy and rhythm of urban life, with bustling streets and towering skyscrapers.</p>
-                      <!-- Additional details or buttons can be added here if needed -->
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-md-4 mb-4">
-                  <div class="card">
-                    <a href="artwork9.html">
-                    <img src="img/download (1).jpg" class="card-img-top" alt="Artwork 3" style="width: 100%; height: 200px;">
-                  </a>
-                    <div class="card-body">
-                      <h5 class="card-title"><strong>Magical Realms</strong></h5>
-                      <p class="card-text">A mesmerizing painting that transports viewers to fantastical realms filled with mythical creatures and enchanting landscapes.</p>
-                      <!-- Additional details or buttons can be added here if needed -->
-                    </div>
-                  </div>
-                </div>
-              </div>
 
 <!-- Repeat the above structure for the next set of three cards -->
 
@@ -721,6 +621,9 @@
         </div>
       </div>
     </div>
+
+
+    <link rel="stylesheet" href="script.js">
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>

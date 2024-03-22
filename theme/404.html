@@ -19,6 +19,15 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+        .fourth-notification.show {
+            display: block !important;
+        }
+        .show {
+    display: block !important; /* Override any other display properties */
+}
+
+    </style>
 
 </head>
 
@@ -197,59 +206,70 @@
                             </div>
                         </li>
 
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Alerts Center
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="artwork1.html">
-                                    <div class="mr-3">
-                                      <div class="icon-circle bg-primary">
-                                        <i class="fas fa-file-alt text-white"></i>
-                                      </div>
-                                    </div>
-                                    <div>
-                                      <div class="small text-gray-500">December 12, 2023</div>
-                                      <span class="font-weight-bold"
-                                        >New picture is on its way!</span
-                                      >
-                                    </div>
-                                  </a>
-                                  <a class="dropdown-item d-flex align-items-center" href="artwork2.html">
-                                    <div class="mr-3">
-                                      <div class="icon-circle bg-success">
-                                        <i class="fas fa-file-alt text-white"></i>
-                                      </div>
-                                    </div>
-                                    <div>
-                                      <div class="small text-gray-500">January 3, 2024</div>
-                                      New picture is on its way!
-                                    </div>
-                                  </a>
-                                  <a class="dropdown-item d-flex align-items-center" href="artwork9.html">
-                                    <div class="mr-3">
-                                      <div class="icon-circle bg-warning">
-                                        <i class="fas fa-file-alt text-white"></i>
-                                      </div>
-                                    </div>
-                                    <div>
-                                      <div class="small text-gray-500">March 3, 2024</div>
-                                      New picture is on its way!
-                                    </div>
-                                  </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
-
+<!-- Nav Item - Alerts -->
+<li class="nav-item dropdown no-arrow mx-1">
+    <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-bell fa-fw"></i>
+        <!-- Counter - Alerts -->
+        <span class="badge badge-danger badge-counter">3+</span>
+    </a>
+    <!-- Dropdown - Alerts -->
+    <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+        aria-labelledby="alertsDropdown">
+        <h6 class="dropdown-header">
+            Alerts Center
+        </h6>
+        <a class="dropdown-item d-flex align-items-center" href="artwork1.html">
+            <div class="mr-3">
+                <div class="icon-circle bg-primary">
+                    <i class="fas fa-file-alt text-white"></i>
+                </div>
+            </div>
+            <div>
+                <div class="small text-gray-500">December 12, 2023</div>
+                <span class="font-weight-bold">New picture is on its way!</span>
+            </div>
+        </a>
+        <a class="dropdown-item d-flex align-items-center" href="artwork2.html">
+            <div class="mr-3">
+                <div class="icon-circle bg-success">
+                    <i class="fas fa-file-alt text-white"></i>
+                </div>
+            </div>
+            <div>
+                <div class="small text-gray-500">January 3, 2024</div>
+                New picture is on its way!
+            </div>
+        </a>
+        <a class="dropdown-item d-flex align-items-center" href="artwork9.html">
+            <div class="mr-3">
+                <div class="icon-circle bg-warning">
+                    <i class="fas fa-file-alt text-white"></i>
+                </div>
+            </div>
+            <div>
+                <div class="small text-gray-500">March 3, 2024</div>
+                New picture is on its way!
+            </div>
+        </a>
+        <a class="dropdown-item d-flex align-items-center fourth-notification" href="artwork9.html" style="display: none;">
+            <div class="mr-3">
+                <div class="icon-circle bg-warning">
+                    <i class="fas fa-file-alt text-white"></i>
+                </div>
+            </div>
+            <div>
+                <div class="small text-gray-500">March 3, 2024</div>
+                New picture is on its way!
+            </div>
+        </a>
+        <!-- <div id="additionalAlerts" style="display: none;"> 
+             Additional alerts will be appended here via JavaScript 
+        </div>-->
+        <a id="showMoreAlerts" class="dropdown-item text-center small text-gray-500" href="#">Show More Alerts</a>
+    </div>
+</li>
                         <!-- Nav Item - Messages
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
@@ -411,6 +431,23 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    const showMoreAlertsLink = document.getElementById("showMoreAlerts");
+    const fourthNotification = document.querySelector(".fourth-notification");
+
+    showMoreAlertsLink.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent the link from navigating
+
+        // Toggle visibility of fourth notification by toggling a class
+        fourthNotification.classList.toggle("show");
+    });
+});
+
+
+    </script>
 
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
